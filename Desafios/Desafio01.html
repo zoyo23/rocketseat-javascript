@@ -97,6 +97,35 @@
         var anosEstudo = 7;
         intervaloInicial += IncrementoItervaloInicial;
         setTimeout(experiencia, intervaloInicial, anosEstudo);
+
+        // Exercício 05
+        function exercicio05(usuarios) {
+            console.log("");
+            console.log("---------    EXERCÍCIO 05    ---------");
+            for (let contador = 0; contador < usuarios.length; contador++) {
+                var item = usuarios[contador];
+                var texto = "O " + item.nome;
+                texto += " possui as habilidades: ";
+                texto += item.habilidades.join(", ");
+                console.log(texto);
+            }
+            console.log("---------    FIM EXERCÍCIO 05    ---------");
+            console.log("");
+            console.log("");
+        }
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+
+        intervaloInicial += IncrementoItervaloInicial;
+        setTimeout(exercicio05, intervaloInicial, usuarios);
     </script>
 </body>
 
