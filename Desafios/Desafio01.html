@@ -8,6 +8,9 @@
 <body>
 
     <script>
+        var intervaloInicial = 1000;
+        var IncrementoItervaloInicial = 1000;
+
         // Exercício 1
         var endereco = {
             rua: "Rua dos pinheiros",
@@ -16,19 +19,37 @@
             cidade: "São Paulo",
             uf: "SP"
         };
-        // O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros" com
-        // nº 1293.
-
         function exercicio01(endereco) {
+            console.log("");
+            console.log("---------    EXERCÍCIO 01    ---------");
             var texto = "O usuario mora em " + endereco.cidade;
             texto += " / " + endereco.uf;
             texto += ", no bairro " + endereco.bairro;
             texto += ", na rua \"" + endereco.rua + "\"";
             texto += " com nº " + endereco.numero + ".";
             console.log(texto);
+            console.log("---------    FIM EXERCÍCIO 01    ---------");
+            console.log("");
+            console.log("");
         }
+        intervaloInicial += IncrementoItervaloInicial;
+        setTimeout(exercicio01, intervaloInicial, endereco);
 
-        setTimeout(exercicio01(endereco), 2000);
+        // Exercício 02
+        function pares(x, y) {
+            console.log("");
+            console.log("---------    EXERCÍCIO 02    ---------");
+            for (let cont = x; cont < y; cont++) {
+                if (cont % 2 == 0) {
+                    console.log(cont);
+                }
+            }
+            console.log("---------    FIM EXERCÍCIO 02    ---------");
+            console.log("");
+            console.log("");
+        }
+        intervaloInicial += IncrementoItervaloInicial;
+        setTimeout(pares, intervaloInicial, 32, 321);
     </script>
 </body>
 
