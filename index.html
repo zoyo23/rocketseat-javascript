@@ -7,36 +7,28 @@
 <body>
 
     <script>
-        function retornaSexo(sexo) {
-            // M , F
-            // Masculino, Feminino
+        // AND, OR, NOT
 
-            // if (sexo === "M") {
-            //     return "Masculino";
-            // }
-            // else if (sexo === "F") {
-            //     return "Feminino";
-            // }
-            // else {
-            //     return "Outro";
-            // }
+        // var sexo = "F", idade = 23;
+        // if (sexo === "F" && idade === 23) { // AND
+        // if (sexo === "F" || idade === 23) { // OR
+        //     console.log("OK");
+        // }
 
-            switch (sexo) {
-                case "M": {
-                    return "Masculino";
-                }
-                case "F": {
-                    return "Feminino";
-                }
-                default: {
-                    return "Outro";
-                }
-            }
-        };
+        // var sexo = "F";
+        // var masculino;
 
-        var resultado = retornaSexo("M");
+        // if (sexo !== "M") {
+        //     masculino = false;
+        // }
+        // else {
+        //     masculino = true;
+        // }
 
-        console.log(resultado);
+        var sexo = "F";
+        var masculino = sexo === "M";
+
+        console.log(masculino);
     </script>
 </body>
 
