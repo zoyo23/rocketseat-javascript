@@ -63,6 +63,40 @@
         var skills = ["Javascript", "ReactJS", "React Native"];
         intervaloInicial += IncrementoItervaloInicial;
         setTimeout(temHabilidade, intervaloInicial, skills);
+
+        // Exercício 04
+        function experiencia(anos) {
+            console.log("");
+            console.log("---------    EXERCÍCIO 04    ---------");
+            switch (true) {
+                case (anos <= 1): {
+                    console.log("Iniciante");
+                    break;
+                }
+                case (anos > 1 && anos <= 3): {
+                    console.log("Intermediário");
+                    break;
+                }
+                case (anos > 3 && anos <= 6): {
+                    console.log("Avançado");
+                    break;
+                }
+                case (anos >= 7): {
+                    console.log("Jedi Master");
+                    break;
+                }
+                default: {
+                    console.log("[DEFAULT] Iniciante");
+                    break;
+                }
+            }
+            console.log("---------    FIM EXERCÍCIO 04    ---------");
+            console.log("");
+            console.log("");
+        }
+        var anosEstudo = 7;
+        intervaloInicial += IncrementoItervaloInicial;
+        setTimeout(experiencia, intervaloInicial, anosEstudo);
     </script>
 </body>
 
