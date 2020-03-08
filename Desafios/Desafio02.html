@@ -40,6 +40,21 @@
         function changeColor(obj) {
             obj.style.backgroundColor = getRandomColor();
         }
+
+        // Exercício 03
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        function preencherLista() {
+            var divLista = document.getElementById("exercicio03");
+            var lista = document.createElement("ul");
+
+            for (let contador = 0; contador < nomes.length; contador++) {
+                var itemLista = document.createElement("li");
+                var itemTexto = document.createTextNode(nomes[contador]);
+                itemLista.appendChild(itemTexto);
+                lista.appendChild(itemLista)
+            }
+            divLista.appendChild(lista);
+        }
     </script>
 </body>
 
