@@ -1,24 +1,21 @@
 <html>
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Curso Java Script</title>
 </head>
 
 <body>
     <div id="app">
-
+        <div class="box"></div>
     </div>
+
     <script>
-        var linkElement = document.createElement("a");
-        // linkElement.href = "http://rocketseat.com.br";
-        linkElement.setAttribute("href", "http://rocketseat.com.br");
-        linkElement.setAttribute("title", "Site da Rocketseat");
+        var boxElement = document.querySelector("div.box");
 
-        var textElement = document.createTextNode("Acessar Site da Rocketseat");
-        linkElement.appendChild(textElement);
-
-        var containerElement = document.querySelector("#app");
-        containerElement.appendChild(linkElement);
+        boxElement.style.width = 100;
+        boxElement.style.height = 100;
+        boxElement.style.backgroundColor = "#F00";
     </script>
 </body>
 
