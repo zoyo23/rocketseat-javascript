@@ -68,6 +68,7 @@
             var lista = document.getElementById("listaNomes");
             var itemLista = document.createElement("li");
             var itemTexto = document.createTextNode(textInput.value);
+            textInput.value = "";
             itemLista.appendChild(itemTexto);
             lista.appendChild(itemLista);
         }
