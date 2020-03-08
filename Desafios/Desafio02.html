@@ -27,6 +27,19 @@
             quadrado.setAttribute("onmouseover", "changeColor(this)");
             quadDiv.appendChild(quadrado);
         }
+
+        // Exercício 02
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        function changeColor(obj) {
+            obj.style.backgroundColor = getRandomColor();
+        }
     </script>
 </body>
 
