@@ -5,13 +5,14 @@
 </head>
 
 <body>
-
+    <div class="app">
+        <button onclick="exibeAlerta()">Me pressione</button>
+        <input onkeypress="exibeAlerta()"></input>
+    </div>
     <script>
-        function exibeAlgo() {
-            console.log("Hello!");
+        function exibeAlerta() {
+            alert("Evento acionado!");
         }
-        // setInterval(exibeAlgo, 1000);
-        setTimeout(exibeAlgo, 5000);
     </script>
 </body>
 
