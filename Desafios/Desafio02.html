@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Exercícios: Módulo 02</title>
+</head>
+
+<body>
+    <div id="exercicio01">
+        <div id="btn_div">
+            <button onclick="adicionarQuadrado()">Adicionar Quadrado</button>
+            <button onclick="preencherLista()">Prencher Lista de Nomes</button>
+        </div>
+        <div id="quad_div"></div>
+    </div>
+
+    <div id="exercicio03"></div>
+    <script>
+        // Exercicio 01
+        function adicionarQuadrado() {
+            var quadDiv = document.getElementById("quad_div");
+            var quadrado = document.createElement("div");
+            quadrado.style.width = 100;
+            quadrado.style.height = 100;
+            quadrado.style.margin = 10;
+            quadrado.style.backgroundColor = "#F00";
+            quadrado.setAttribute("onmouseover", "changeColor(this)");
+            quadDiv.appendChild(quadrado);
+        }
+    </script>
+</body>
+
+</html>
