@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Exercícios: Módulo 03</title>
+</head>
+
+<body>
+
+    <script>
+        // Exercício 01
+        function checaIdade(idade) {
+            var tempoParaResposta = 2000;
+            return new Promise((resolve, reject) => {
+                if (idade > 18) {
+                    setTimeout(() => {
+                        resolve("Maior!");
+                    }, tempoParaResposta);
+                }
+                else {
+                    setTimeout(() => {
+                        reject("Menor!");
+                    }, tempoParaResposta);
+                }
+            });
+        }
+        checaIdade(20)
+            .then(function (data) {
+                console.log("Maior que 18");
+            })
+            .catch(function (err) {
+                console.log("Menor que 18");
+            });
+    </script>
+</body>
+
+</html>
