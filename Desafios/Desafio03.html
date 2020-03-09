@@ -47,7 +47,7 @@
             var userName = document.getElementById("user").value;
             var method = "/repos"
             var url = urlBase + userName + method;
-
+            exibirLoad();
             axios.get(url)
                 .then(data => {
                     criarListaRepositorios(data.data);
@@ -68,6 +68,20 @@
                 itemlist.appendChild(textItem);
                 list.appendChild(itemlist);
             }
+
+            divList.appendChild(list);
+        }
+
+        // Exercício 03
+        function exibirLoad() {
+            var divList = document.getElementById("divList");
+            divList.innerHTML = "";
+
+            var list = document.createElement("ul");
+            var itemlist = document.createElement("li");
+            var textItem = document.createTextNode("Carregando...");
+            itemlist.appendChild(textItem);
+            list.appendChild(itemlist);
 
             divList.appendChild(list);
         }
