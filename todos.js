@@ -1,5 +1,5 @@
 var listElements = document.querySelector("#app ul");
-var inputElements = document.querySelector("#app input");
+var inputElement = document.querySelector("#app input");
 var buttonElements = document.querySelector("#app button");
 
 var todos = [
@@ -9,6 +9,7 @@ var todos = [
 ];
 
 function renderTodos() {
+    listElements.innerHTML = "";
     for (todo of todos) {
         var todoElement = document.createElement("li");
         var todoText = document.createTextNode(todo);
@@ -19,3 +20,13 @@ function renderTodos() {
 }
 
 renderTodos();
+
+function addTodo() {
+    var todoText = inputElement.value;
+
+    todos.push(todoText);
+    inputElement.value = "";
+    renderTodos();
+}
+
+buttonElements.onclick = addTodo;
