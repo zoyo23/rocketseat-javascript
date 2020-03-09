@@ -7,6 +7,15 @@
 
 <body>
 
+    <div id="exercicio02">
+        <input type="text" name="user" id="user">
+        <button onclick="buscarPerfil()">Adicionar</button>
+
+        <div id="divList"></div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <script>
         // Exercício 01
         function checaIdade(idade) {
@@ -31,6 +40,37 @@
             .catch(function (err) {
                 console.log("Menor que 18");
             });
+
+        // Exercício 02
+        function buscarPerfil() {
+            var urlBase = "https://api.github.com/users/"
+            var userName = document.getElementById("user").value;
+            var method = "/repos"
+            var url = urlBase + userName + method;
+
+            axios.get(url)
+                .then(data => {
+                    criarListaRepositorios(data.data);
+                })
+                .catch(err => {
+                    console.warn(err);
+                });
+        }
+
+        function criarListaRepositorios(listaRepositorios) {
+            var divList = document.getElementById("divList");
+            divList.innerHTML = "";
+            var list = document.createElement("ul");
+
+            for (item of listaRepositorios) {
+                var itemlist = document.createElement("li");
+                var textItem = document.createTextNode(item.name);
+                itemlist.appendChild(textItem);
+                list.appendChild(itemlist);
+            }
+
+            divList.appendChild(list);
+        }
     </script>
 </body>
 
